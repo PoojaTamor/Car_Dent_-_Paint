@@ -1,0 +1,1086 @@
+/* 
+
+TemplateMo 586 Scholar
+
+https://templatemo.com/tm-586-scholar
+
+*/
+
+/* ---------------------------------------------
+Table of contents
+------------------------------------------------
+01. font & reset css
+02. reset
+03. global styles
+04. header
+05. banner
+06. features
+07. testimonials
+08. contact
+09. footer
+
+--------------------------------------------- */
+/* 
+---------------------------------------------
+font & reset css
+--------------------------------------------- 
+*/
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900"); */
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* 
+---------------------------------------------
+reset
+--------------------------------------------- 
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
+s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+figure, header, nav, section, article, aside, footer, figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header, nav, section, article, aside, footer, hgroup {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Instrument Sans", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h1, h2, h3, h5, h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+
+ul {
+  margin-bottom: 0px;
+}
+
+
+
+img {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 
+---------------------------------------------
+Global Styles
+--------------------------------------------- 
+*/
+
+:root{
+  --light-color:#fff;
+  --second-light-color:#A5A4A4;
+  --hightlight-color:#F5D500;
+}
+html,
+body {
+  font-family: "Instrument Sans", sans-serif;
+
+}
+
+::selection {
+  background: #7a6ad8;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #7a6ad8;
+  color: #fff;
+}
+
+.section {
+  padding-top: 30px;
+  margin-top: 120px;
+}
+
+.section-heading {
+  margin-bottom: 60px;
+}
+
+.section-heading h2 {
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 20px 0;
+  line-height: 44px;
+}
+
+.section-heading h2 em {
+  color: #7a6ad8;
+  font-style: normal;
+}
+
+.section-heading h6 {
+  color: #7a6ad8;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.main-button a {
+  display: inline-block;
+  background-color: #fff;
+  color: #7a6ad8;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px 25px;
+  border-radius: 20px;
+  transition: all .3s;
+}
+
+.main-button a:hover {
+  background-color: #7a6ad8;
+  color: #fff;
+}
+
+/* 
+---------------------------------------------
+Pre-loader Style
+--------------------------------------------- 
+*/
+
+.js-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.99);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.js-preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@-webkit-keyframes dot {
+  50% {
+      -webkit-transform: translateX(96px);
+      transform: translateX(96px);
+  }
+}
+
+@keyframes dot {
+  50% {
+      -webkit-transform: translateX(96px);
+      transform: translateX(96px);
+  }
+}
+
+@-webkit-keyframes dots {
+  50% {
+      -webkit-transform: translateX(-31px);
+      transform: translateX(-31px);
+  }
+}
+
+@keyframes dots {
+  50% {
+      -webkit-transform: translateX(-31px);
+      transform: translateX(-31px);
+  }
+}
+
+.preloader-inner {
+  position: relative;
+  width: 142px;
+  height: 40px;
+  background: transparent;
+}
+
+.preloader-inner .dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  background: #7a6ad8;
+  border-radius: 50%;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-animation: dot 2.8s infinite;
+  animation: dot 2.8s infinite;
+}
+
+.preloader-inner .dots {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  -webkit-animation: dots 2.8s infinite;
+  animation: dots 2.8s infinite;
+}
+
+.preloader-inner .dots span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  background: #7a6ad8;
+  border-radius: 50%;
+}
+
+/* ------------------------------section1------------------------------------------------ */
+
+.service-section {
+  background-color: #000;
+  color: var(--light-color);
+  padding: 50px 10px 100px 10px ;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+}
+.service-section h1 {
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: 3.4rem;
+  padding: 100px 0px 0px 0px ;
+
+}
+
+.service-section .highlight {
+  color: #FFD700;
+}
+.rowbox{
+  border-bottom: 1px solid var(--light-color);
+}
+.service-section img {
+  width: 120%;
+  /* height: 800px; */
+  opacity: 0.8;
+  /* border: 1px solid #dbd7d7; */
+}
+.service-section .scroll-btn {
+  margin-top: 20px;
+}
+/* .service-section .scroll-btn a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+} */
+.scroll-btn{
+  padding-left: 50px;
+}
+.service-section .scroll-btn a {
+  letter-spacing: 3px;
+  color: #fff;
+  text-decoration: none;
+  padding: 9px 30px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.5s;
+}
+.service-section .scroll-btn a:hover {
+  background-color: var(--hightlight-color);
+  color: #000;
+  border: 2px solid black;
+
+}
+.service-section .description {
+  font-size: 1.3rem;
+  margin-top: 20px;
+font-weight: 400;
+color: var(--second-light-color);
+  text-align: right;
+}
+/* ------------------------------section1 end------------------------------------------------ */
+/* ------------------------------section2 ------------------------------------------------ */
+
+.services-section {
+  background-color: #e0e0e0; /* Light gray background */
+}
+
+.services-label {
+  font-size: 1.2rem;
+
+  font-weight: 600;
+  color: #000;
+  letter-spacing: 4px;
+  padding: 7px 30px;
+  border: 1px solid #000;
+  display: inline-block;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.services-label:hover{
+  background-color: #000;
+  color: #fff;
+}
+.services-title {
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: #000;
+  margin-block: 50px;
+}
+
+.services-description {
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.services-image img {
+  border-radius: 16px; /* Rounded corners for the image */
+}
+/* ------------------------------section2 end------------------------------------------------ */
+/* ------------------------------section3 ------------------------------------------------ */
+.custom-service-section {
+  padding: 60px 60px;
+  background-color:#E7E7E7;
+}
+.custom-accordion-button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #222;
+}
+.custom-accordion-header .accordion-button::after {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.custom-accordion-header p{
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #000;
+  padding-left: 6rem;
+  
+}
+.accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.accordion-button::after {
+  flex-shrink: 0;
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  background-image:url("../images/accodianarrow.png") !important;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+}
+.custom-accordion-number {
+  color: #A5A4A4;
+  font-weight: 600;
+  font-size: 2.2rem;
+  margin-right: 10px;
+}
+.accordion-button:focus {
+  border-color: none;
+  outline: none;
+  box-shadow: none;
+}
+.custom-service-image {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+  width: 100%;
+}
+.custom-service-description {
+  text-align: center;
+  color: #444;
+  font-size: 1rem;
+  margin-top: 15px;
+}
+.custom-service-description-title {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.accodian-right p{
+  color: #454545;
+  font-size: 1.3rem;
+}
+.custom-service-section .accordion-body{
+  padding-top: 30px;
+  padding-bottom: 65px;
+  background-color: #E7E7E7;
+
+}
+.custom-service-section  .custom-accordion-button{
+  padding-block: 30px;
+  background-color: #E7E7E7;
+  border: none;
+  border-bottom: 1px solid #A5A4A4;
+
+
+}
+.custom-bottom-box {
+  margin-top: 60px;
+}
+.custom-service-arrow{
+  padding: 50px 0px 0px 100px;
+}
+.accordion-item {
+  border:none;
+}
+/* ------------------------------section3 end------------------------------------------------ */
+/* ------------------------------section4------------------------------------------------ */
+
+    
+.section4{
+  background-color: #D9D9D9;
+}
+
+
+.custom-row {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+
+.custom-subtitle {
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-align: left;
+  color: #666;
+}
+
+.custom-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-top: 60px;
+}
+
+.custom-experience-btn {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: 4px;
+  padding: 7px 30px;
+  border: 1px solid #000;
+  display: inline-block;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.custom-experience-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.custom-description {
+  font-size: 1.1rem;
+  color: #000;
+  margin-top: 1.3rem;
+  /* width: 400px; */
+  
+}
+
+
+.custom-carousel-container {
+  width: 100%;
+  padding: 3rem 0 3rem;
+  overflow: hidden;
+}
+
+.custom-swiper-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  width: 56%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.custom-button-next,
+.custom-button-prev {
+  color: #000;
+  height: 40px;
+  width: 40px;
+  background-color: #F5D500;
+  border-radius: 100px;
+}
+
+.custom-pagination {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  border-radius: 100px;
+  backdrop-filter: blur(10px);
+}
+
+.swiper-pagination-bullet {
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 1rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+  width: 2rem;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom,-100px);
+    top: var(--swiper-pagination-top,auto);
+    left: 700px;
+    width: 30%;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    font-size: 40px;
+    transform: rotate(-49deg) !important;
+}
+
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    display: none;
+}
+.section4top{
+    position: relative;
+}
+.custom-button-next, .custom-button-prev {
+    color: #000;
+    height: 70px;
+    width: 70px;
+    bottom: 0;
+    left: 66px;
+    background-color: #F5D500;
+    border-radius: 100px;
+}
+ .custom-button-prev {
+   display: none;
+}
+
+.crusalheadinf{
+  font-size: 2rem;
+  color: #000;
+  text-align: left;
+  margin-left: 30px;
+}
+.crusaltext{
+  font-size: 1.5rem;
+  text-align: left;
+  margin-left: 30px;
+}
+
+/* ------------------------------section4 end------------------------------------------------ */
+/* ------------------------------section5------------------------------------------------ */
+.expertise-section {
+  padding: 50px 20px;
+  background-color: #E7E7E7;
+  text-align: left;
+}
+.expertise-title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-align: left;
+  margin-bottom: 70px;
+  color: #666;
+}
+.expertise-item {
+  margin-bottom: 30px;
+}
+
+.sec3text{
+  display: flex;
+  justify-content:end;
+}
+.sec3text p{
+  font-size: 1.3rem;
+}
+
+.expertise-icon img {
+  width: 150px;
+  height: 150px;
+}
+.expertise-item-title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+.expertise-item-description {
+  font-size: 1.3rem;
+  color: #454545;
+  width: 370px;
+  font-weight: 500;
+}
+
+/* ------------------------------section5 end------------------------------------------------ */
+/* ------------------------------section6------------------------------------------------ */
+
+.section6{
+  background-color: #000 !important;
+
+}
+.section-heading {
+  text-align: center;
+  margin: 80px 0px 70px 0px ;
+  color: white;
+  font-weight: 600;
+}
+
+.section-heading p{
+  color: #A5A4A4;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.card-section {
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+  color: white;
+}
+.card-section img {
+  width: 100%;
+  height: 490px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 74%);
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  border-radius: 20px;
+  padding: 100px 0px 0px 100px ;
+
+}
+
+.card-overlay span{
+ color: #A5A4A4;
+}
+.card-overlay h4 {
+  font-weight:600;
+  font-size: 2.5rem;
+}
+.card-overlay p {
+  margin-top: 60px;
+  color: #E7E7E7;
+  font-size: 1.2rem;
+  width: 500px;
+}
+/* ------------------------------section6 end------------------------------------------------ */
+/* ------------------------------section7 ------------------------------------------------ */
+
+
+.section7{
+  background-color: #D9D9D9;
+}
+.section7  .row>*{
+
+    padding-right:0px;
+    padding-left: 0px;
+}
+.appointment-box{
+  display: flex;
+  /* justify-content: end; */
+  padding: 100px 0px 0px 80px !important;
+}
+
+.appointment-heading{
+  font-size: 4rem;
+  font-weight: 500;
+}
+.appointment-heading span{
+  font-weight: 600;
+}
+.appointment-subtitle {
+  color: #000;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+
+.appointment-box-left{
+ padding-top: 200px;
+}
+.appointment-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 28px;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.appointment-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.bottompehra{
+  margin-top:30px;
+  font-size: 1.2rem;
+
+}
+
+.appointment-note {
+  font-weight: 600;
+}
+
+
+
+/* ------------------------------section7 end------------------------------------------------ */
+
+@media (max-width: 768px) {
+  .rowbox ,.rowbox1{
+    flex-direction: column-reverse;
+    border: none;
+  }
+.service-section img {
+  width: 100%;
+}
+.service-section h1 {
+  font-size: 3rem;
+  padding: 33px 0px 0px 0px;
+}
+.service-section .description {
+  font-size: 1rem;
+  margin-top: 20px;
+  text-align: left;
+}
+.service-section .scroll-btn{
+  margin-top: 35px;
+}
+.scroll-btn {
+  padding-left: 23px;
+}
+.service-section svg{
+  width: 40px !important;
+  height: 40px !important;
+}
+
+}
+
+@media (max-width: 500px) {
+  .service-section h1 {
+    font-size: 2.2rem;
+    padding: 32px 0px 0px 20px;
+  }
+  .service-section .description {
+    font-size: 0.9rem;
+    margin-top: -1px;
+    padding-left: 20px;
+}
+.service-section .scroll-btn a {
+ 
+  padding: 8px 22px;
+  margin-left: 22px;
+  font-size: 0.8rem;
+  margin-top: 0px;
+}
+.service-section {
+  background-color: #000;
+  color: var(--light-color);
+  padding: 50px 10px 60px 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.service-section .scroll-btn {
+  margin-top: 40px;
+}
+
+/* --------------section2-------- */
+.services-title {
+  font-size: 2.5rem;
+  margin-block: 35px;
+}
+.services-section {
+  padding-inline: 20px;
+}
+.services-label {
+  font-size: 0.9rem;
+  padding: 7px 25px;
+
+}
+.services-description {
+  font-size: 1rem;
+}
+/* ----------------section-3---------------- */
+.custom-service-section {
+  padding: 60px 20px;
+}
+.sec3text{
+  justify-content: end;
+}
+.sec3text p {
+  font-size: 0.8rem;
+}
+.expertise-title {
+  font-size: 0.9rem;
+  margin-bottom: 13px;
+}
+.custom-accordion-header p {
+  font-size: 1rem;
+  padding-left: 1.2rem;
+}
+.custom-accordion-number {
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+.accordion-button::after {
+  width: 32px;
+  height: 32px;
+
+}
+.custom-bottom-box svg{
+  width: 100px;
+  height: 100px;
+}
+.custom-service-section  .custom-accordion-button {
+  padding-block: 25px;
+}
+.custom-bottom-box{
+  margin-top: 20px;
+}
+.custom-service-arrow {
+  padding: 47px 0px 0px 0px;
+}
+.accodian-right p {
+  font-size: 0.7rem;
+}
+.custom-service-description-title {
+  font-size: 0.8rem;
+}
+.custom-service-section .accordion-body {
+  padding-top: 20px;
+  padding-bottom: 37px;
+}
+/* -----section4--------- */
+.custom-title {
+  font-size: 1rem;
+  margin-top: 40px;
+}
+.custom-subtitle {
+  font-size: 0.9rem;
+}
+.custom-description {
+  font-size: 0.7rem;
+  margin-top: 1rem;
+}
+.custom-experience-btn {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  padding: 7px 10px;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.custom-carousel-container {
+  margin:0px;
+}
+.swiper-slide img{
+  border-radius: 10px;
+}
+.crusalheadinf{
+  font-size: 0.7rem;
+  color: #000;
+  margin-left: 10px;
+}
+.crusaltext{
+  font-size: 0.7rem;
+  margin-left: 10px;
+}
+
+.custom-button-next, .custom-button-prev {
+  height: 45px;
+  width: 45px;
+  bottom: 0;
+  left: 180px;
+  border-radius: 50%;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: 'next';
+  font-size: 30px;
+  transform: rotate(-49deg) !important;
+}
+/* ------------------section5------- */
+.expertise-section {
+  padding: 0px 20px;
+}
+.expertise-icon img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+}
+.expertise-item-title {
+  font-size: 1rem;
+}
+.expertise-item-description {
+  font-size: 0.8rem;
+  width: 260px;
+}
+
+/* -----------------section6---------- */
+.section-heading {
+  text-align: left;
+  margin: 0px 0px 60px 0px;
+}
+.section-heading h2 {
+  font-size: 28px;
+  margin: 15px 0;
+  line-height: 33px;
+}
+.section-heading p {
+  color: #A5A4A4;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.card-section img {
+  height:unset;
+  border-radius: 10px;
+
+
+}
+  .card-overlay {
+    padding: 25px 0px 0px 20px;
+    border-radius: 10px;
+}
+  .card-overlay h4 {
+    font-size: 1rem;
+}
+.card-overlay p {
+  margin-top: 30px;
+  font-size: 0.7rem;
+  width: 230px;
+}
+.card-section {
+  border-radius: 10px;
+
+}
+
+/* -------------section7----------- */
+.appointment-box {
+  padding: 50px 0px 0px 23px !important;
+}
+  /* justify-content: end; */
+
+  .appointment-heading {
+    font-size: 2rem;
+    font-weight: 500;
+}
+.appointment-subtitle {
+  font-size: 0.9rem;
+}
+.appointment-box-left {
+  padding-top: 35px;
+}
+.section7  .row>* {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.appointment-button {
+  margin-top: 50px;
+  padding: 9px 20px;
+  border-radius: 28px;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+
+}
+.bottompehra {
+  margin-top: 30px;
+  font-size: 0.8rem;
+  padding-bottom: 30px;
+}
+}
